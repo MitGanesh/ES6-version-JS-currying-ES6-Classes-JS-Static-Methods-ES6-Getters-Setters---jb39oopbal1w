@@ -1,18 +1,14 @@
 // import using require
-const obj = require('./shape');
-let Shape = obj.Shape;
+var Shape = require('./shape');
 
 // declare class
 class Circle extends Shape{
-    constructor(color){
-        super(color);
+    constructor(){
+        super();
+        this.calculateArea = ()=>{}
     }
-    calculateArea(radius){
-        return Math.PI * radius * radius;
-    }
-}
+    
+};
 
 // export class using module.exports
-module.exports = {
-    Circle : Circle
-}
+module.exports = Circle;
